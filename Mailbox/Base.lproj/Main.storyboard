@@ -68,6 +68,10 @@
                                             <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="message" id="OFn-WA-H7r">
                                                 <rect key="frame" x="0.0" y="0.0" width="320" height="86"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <gestureRecognizers/>
+                                                <connections>
+                                                    <outletCollection property="gestureRecognizers" destination="C6E-p6-9vA" appends="YES" id="255-Pl-Ylf"/>
+                                                </connections>
                                             </imageView>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -86,9 +90,17 @@
                     <connections>
                         <outlet property="feed" destination="vbj-e9-Zna" id="0S7-bo-LBu"/>
                         <outlet property="feedScrollView" destination="hBk-bn-uFu" id="LZF-rE-bKf"/>
+                        <outlet property="leftBackground" destination="1vr-IX-bgq" id="8UR-Zm-IKm"/>
+                        <outlet property="messageView" destination="OFn-WA-H7r" id="AyP-kO-sYo"/>
+                        <outlet property="rightBackground" destination="COD-9U-tDk" id="BLd-Ye-iV5"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="I5y-pZ-gMh" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <panGestureRecognizer minimumNumberOfTouches="1" id="C6E-p6-9vA" userLabel="Message Pan Gesture Recognizer">
+                    <connections>
+                        <action selector="didPan:" destination="2bV-Pa-AuO" id="y2G-VC-CSh"/>
+                    </connections>
+                </panGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="508" y="405.5"/>
         </scene>
