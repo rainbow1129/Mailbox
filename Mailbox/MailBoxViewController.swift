@@ -40,21 +40,31 @@ class MailBoxViewController: UIViewController {
         
         if sender.state == UIGestureRecognizerState.Began {
             initialCenter = messageView.center
-            rightBackground.backgroundColor = UIColor.redColor()
+            rightBackground.backgroundColor = UIColor.lightGrayColor()
             leftBackground.backgroundColor = UIColor.lightGrayColor()
             
         } else if sender.state == UIGestureRecognizerState.Changed {
             messageView.center = CGPoint(x: translation.x + initialCenter.x, y: initialCenter.y)
-            if messageView.center.x < view.center.x {
-                leftBackground.alpha = 1
-                rightBackground.alpha = 0
-            } else {
-                rightBackground.alpha = 1
-                leftBackground.alpha = 0
-            }
+            UIView.animateWithDuration(0.2, animations: { () -> Void in
+                if self.messageView.center.x < self.view.center.x {
+                    self.leftBackground.alpha = 1
+                    self.rightBackground.alpha = 0
+                } else {
+                    self.rightBackground.alpha = 1
+                    self.leftBackground.alpha = 0
+                }
+            })
+          
             
           
         } else if sender.state == UIGestureRecognizerState.Ended {
+            UIView.animateWithDuration(0.2, animations: { () -> Void in
+                if self.messageView.center.x > self.view.center.x - 60 {
+                    self.messageView.frame.origin.x = 0
+                }
+                
+            })
+           
            
         }
     }
