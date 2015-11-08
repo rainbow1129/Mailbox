@@ -24,7 +24,7 @@ class MailBoxViewController: UIViewController {
     // let grayColor = UIColor(red: 0xEA, green: 0xEA, blue: 0xEA, alpha: 1)
     let grayColor = UIColor(red: 0.92, green: 0.92, blue: 0.92, alpha: 1)
     let yellowColor = UIColor(red: 0.96, green: 0.8, blue: 0, alpha: 1)
-    let brownColor = UIColor(red: 0.83, green: 0.55, blue: 0.34, alpha: 1)
+    let brownColor = UIColor(red: 0.81, green: 0.64, blue: 0.52, alpha: 1)
     let greenColor = UIColor(red: 0.38, green: 0.67, blue: 0.38, alpha: 1)
     let redColor = UIColor(red: 0.89, green: 0.3, blue: 0.3, alpha: 1)
     
@@ -81,31 +81,42 @@ class MailBoxViewController: UIViewController {
                     laterIcon.alpha = 0
                     listIcon.alpha = 1
                 }
-                /*
-                if ((self.messageView.center.x + self.messageView.frame.width / 2) < (self.laterIcon.frame.origin.x + self.laterIcon.frame.width)) {
-                    UIView.animateWithDuration(0.3, animations: { () -> Void in
-                        self.laterIcon.alpha = 1
-                    })
-                } else if (self.messageView.center.x < (self.view.center.x - 60)) {
-                    laterIcon.transform = CGAffineTransformMakeTranslation(messageView.center.x + 170, laterIcon.center.y)
-                    leftBackground.backgroundColor = UIColor.yellowColor()
-                }
-                */
+
                 
             } else {
                 self.rightBackground.alpha = 1
                 self.leftBackground.alpha = 0
             }
-            
-        } else if sender.state == UIGestureRecognizerState.Ended {
-            UIView.animateWithDuration(0.2, animations: { () -> Void in
-                if self.messageView.center.x > self.view.center.x - 60 {
-                    self.messageView.frame.origin.x = 0
-                    self.laterIcon.alpha = 0
+        } else if (sender.state == UIGestureRecognizerState.Ended) {
+            let diff = self.messageView.center.x - self.view.center.x
+            if (diff < 0) {
+                self.leftBackground.alpha = 1
+                self.rightBackground.alpha = 0
+                if (diff > -60) {
+                    //  If released at this point, the message should return to its initial position.
+                    UIView.animateWithDuration(0.2, animations: { () -> Void in
+                        self.messageView.frame.origin.x = 0
+                        self.laterIcon.alpha = 0
+                        
+                    })
+                } else if (diff > -260) {
+                    // Upon release, the message should continue to reveal the yellow background. When the animation it complete, it should show the reschedule options.
+                    UIView.animateWithDuration(0.3, delay: 0, usingSpringWithDamping: 0.9, initialSpringVelocity: 10, options: [], animations: { () -> Void in
+                        self.messageView.frame.origin.x = -320
+                        self.laterIcon.frame.origin.x = 30
+                        self.laterIcon.alpha = 0
+                        }, completion: { (finished: Bool) -> Void in
+                            UIView.animateWithDuration(0.3, animations: { () -> Void in
+                              self.performSegueWithIdentifier("rescheduleSegue", sender: self)
+                            })
+                    })
+                } else {
+                    // Upon release, the message should continue to reveal the brown background. When the animation it complete, it should show the list options.
                 }
                 
-            })
-            
+            } else {
+                
+            }
         }
     }
     

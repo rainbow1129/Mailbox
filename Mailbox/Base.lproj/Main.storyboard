@@ -89,6 +89,7 @@
                         <outlet property="listIcon" destination="hRK-ha-PUO" id="kEV-kG-vMh"/>
                         <outlet property="messageView" destination="OFn-WA-H7r" id="AyP-kO-sYo"/>
                         <outlet property="rightBackground" destination="COD-9U-tDk" id="BLd-Ye-iV5"/>
+                        <segue destination="rgM-oP-NpA" kind="modal" identifier="rescheduleSegue" animates="NO" id="wa1-4U-Xqs"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="I5y-pZ-gMh" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -100,6 +101,73 @@
             </objects>
             <point key="canvasLocation" x="508" y="405.5"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="F2s-GN-xqZ">
+            <objects>
+                <viewController id="rgM-oP-NpA" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="EKU-JA-0nE">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="reschedule" id="Uq4-Qa-nAk">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="juK-uh-tri">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <segue destination="2bV-Pa-AuO" kind="modal" animates="NO" id="O1c-Na-oe1"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fzh-iR-Id6" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="866" y="-26"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="s1T-A3-NJz">
+            <objects>
+                <viewController id="TsC-Ld-e2m" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5Sj-uZ-bXC">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="list" id="WJJ-1T-3fU">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="P2L-Me-Amm" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1218" y="-26"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="yUA-eM-tPn">
+            <objects>
+                <viewController id="bSR-G9-0me" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="pa5-aU-2Sx">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="menu" id="8Lk-rW-2zp">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Z12-ii-oTI" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1583" y="-26"/>
+        </scene>
     </scenes>
     <resources>
         <image name="archive_nav_icon" width="25" height="20"/>
@@ -107,10 +175,13 @@
         <image name="help_label" width="320" height="37"/>
         <image name="later_icon" width="25" height="25"/>
         <image name="later_nav_icon" width="25" height="20"/>
+        <image name="list" width="320" height="568"/>
         <image name="list_icon" width="25" height="25"/>
         <image name="mail_nav_icon" width="25" height="20"/>
+        <image name="menu" width="320" height="568"/>
         <image name="message" width="320" height="86"/>
         <image name="nav" width="320" height="65"/>
+        <image name="reschedule" width="320" height="568"/>
         <image name="search" width="320" height="42"/>
     </resources>
 </document>
