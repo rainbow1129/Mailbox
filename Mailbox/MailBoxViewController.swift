@@ -14,7 +14,7 @@ class MailBoxViewController: UIViewController {
     @IBOutlet weak var feedScrollView: UIScrollView!
     override func viewDidLoad() {
         super.viewDidLoad()
-        feedScrollView.contentSize = feed.image!.size
+        feedScrollView.contentSize = CGSize(width: feed.image!.size.width, height: feed.image!.size.height + 90)
 
         // Do any additional setup after loading the view.
     }

@@ -24,7 +24,7 @@
             <objects>
                 <viewController id="2bV-Pa-AuO" customClass="MailBoxViewController" customModule="Mailbox" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="LuE-iK-gbL">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="1345"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="1431"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="nav" id="MDe-Dr-vdK">
@@ -50,15 +50,30 @@
                                 <color key="tintColor" red="0.26666666666666666" green="0.66666666666666663" blue="0.82352941176470584" alpha="1" colorSpace="calibratedRGB"/>
                             </segmentedControl>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="hBk-bn-uFu">
-                                <rect key="frame" x="0.0" y="143" width="320" height="1204"/>
+                                <rect key="frame" x="0.0" y="143" width="320" height="1288"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <subviews>
-                                    <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="feed" id="vbj-e9-Zna">
-                                        <rect key="frame" x="0.0" y="0.0" width="320" height="1202"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                    </imageView>
-                                    <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="message" id="OFn-WA-H7r">
+                                    <view contentMode="scaleToFill" id="6pU-N9-GSg">
                                         <rect key="frame" x="0.0" y="0.0" width="320" height="86"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <subviews>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="1vr-IX-bgq">
+                                                <rect key="frame" x="0.0" y="-143" width="320" height="1433"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            </imageView>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="COD-9U-tDk">
+                                                <rect key="frame" x="0.0" y="-143" width="320" height="1433"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            </imageView>
+                                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="message" id="OFn-WA-H7r">
+                                                <rect key="frame" x="0.0" y="0.0" width="320" height="86"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            </imageView>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    </view>
+                                    <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="feed" id="vbj-e9-Zna">
+                                        <rect key="frame" x="0.0" y="86" width="320" height="1202"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     </imageView>
                                 </subviews>
@@ -67,7 +82,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-                    <size key="freeformSize" width="320" height="1345"/>
+                    <size key="freeformSize" width="320" height="1431"/>
                     <connections>
                         <outlet property="feed" destination="vbj-e9-Zna" id="0S7-bo-LBu"/>
                         <outlet property="feedScrollView" destination="hBk-bn-uFu" id="LZF-rE-bKf"/>
@@ -75,7 +90,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="I5y-pZ-gMh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="508" y="406"/>
+            <point key="canvasLocation" x="508" y="405.5"/>
         </scene>
     </scenes>
     <resources>
