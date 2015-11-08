@@ -5,20 +5,6 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
-        <scene sceneID="tne-QT-ifu">
-            <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Mailbox" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="162.66666666666666" y="406.59333333333331"/>
-        </scene>
         <!--Mail Box View Controller-->
         <scene sceneID="aAs-Xt-UU9">
             <objects>
@@ -65,6 +51,14 @@
                                                 <rect key="frame" x="0.0" y="-143" width="320" height="1433"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             </imageView>
+                                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="later_icon" id="eg2-af-adR">
+                                                <rect key="frame" x="276" y="32" width="25" height="25"/>
+                                                <autoresizingMask key="autoresizingMask"/>
+                                            </imageView>
+                                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="list_icon" id="hRK-ha-PUO">
+                                                <rect key="frame" x="90" y="32" width="25" height="25"/>
+                                                <autoresizingMask key="autoresizingMask"/>
+                                            </imageView>
                                             <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="message" id="OFn-WA-H7r">
                                                 <rect key="frame" x="0.0" y="0.0" width="320" height="86"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -90,7 +84,9 @@
                     <connections>
                         <outlet property="feed" destination="vbj-e9-Zna" id="0S7-bo-LBu"/>
                         <outlet property="feedScrollView" destination="hBk-bn-uFu" id="LZF-rE-bKf"/>
+                        <outlet property="laterIcon" destination="eg2-af-adR" id="acT-S5-vi4"/>
                         <outlet property="leftBackground" destination="1vr-IX-bgq" id="8UR-Zm-IKm"/>
+                        <outlet property="listIcon" destination="hRK-ha-PUO" id="kEV-kG-vMh"/>
                         <outlet property="messageView" destination="OFn-WA-H7r" id="AyP-kO-sYo"/>
                         <outlet property="rightBackground" destination="COD-9U-tDk" id="BLd-Ye-iV5"/>
                     </connections>
@@ -109,7 +105,9 @@
         <image name="archive_nav_icon" width="25" height="20"/>
         <image name="feed" width="320" height="1202"/>
         <image name="help_label" width="320" height="37"/>
+        <image name="later_icon" width="25" height="25"/>
         <image name="later_nav_icon" width="25" height="20"/>
+        <image name="list_icon" width="25" height="25"/>
         <image name="mail_nav_icon" width="25" height="20"/>
         <image name="message" width="320" height="86"/>
         <image name="nav" width="320" height="65"/>
