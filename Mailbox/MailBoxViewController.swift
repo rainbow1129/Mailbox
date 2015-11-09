@@ -25,6 +25,7 @@ class MailBoxViewController: UIViewController, UIGestureRecognizerDelegate {
     @IBOutlet weak var leftBackground: UIImageView!
     @IBOutlet weak var feed: UIImageView!
     @IBOutlet weak var feedScrollView: UIScrollView!
+    @IBOutlet weak var screenView: UIView!
     
     var initialCenter: CGPoint!
     var mainViewInitialCenter: CGPoint!
@@ -50,7 +51,7 @@ class MailBoxViewController: UIViewController, UIGestureRecognizerDelegate {
         leftBackground.alpha = 0
         laterIcon.alpha = 0
         listIcon.alpha = 0
-        menuView.alpha = 0
+        menuView.alpha = 1
         listView.alpha = 0
         rescheduleView.alpha = 0
         
@@ -237,38 +238,36 @@ class MailBoxViewController: UIViewController, UIGestureRecognizerDelegate {
     }
     
     func openNav() {
-        let screenWidth = mainView.frame.width
-        let open = screenWidth - 60
-        let menuOpen = CGPoint(x: open, y: 0.0)
+        UIView.animateWithDuration(0.5, delay: 0, usingSpringWithDamping: 0.9, initialSpringVelocity: 5, options: [], animations: { () -> Void in
+            self.mainView.frame.origin.x = self.screenView.frame.width - 60
+            }, completion: { (finished: Bool) -> Void in
+        })
     }
     
     func closeNav() {
-        let menuClose = CGPoint(x: 0.0, y:0.0)
+        UIView.animateWithDuration(0.5, delay: 0, usingSpringWithDamping: 0.9, initialSpringVelocity: 5, options: [], animations: { () -> Void in
+            self.mainView.frame.origin.x = 0
+            }, completion: { (finished: Bool) -> Void in
+        })
     }
     
     
     func screenEdgeSwiped(recognizer: UIScreenEdgePanGestureRecognizer) {
-        let location = recognizer.locationInView(mainView)
-        let velocity = recognizer.velocityInView(mainView).x
-        if recognizer.state == .Began {
+        let location = recognizer.locationInView(screenView)
+        let velocity = recognizer.velocityInView(screenView).x
+        if (recognizer.state == .Began) {
+            
+        } else if (recognizer.state == .Changed) {
+            mainView.frame.origin.x = location.x
+        } else if (recognizer.state == .Ended) {
+            
+            if (velocity > 100 || location.x > 120) {
+                openNav()
+            } else {
+                closeNav()
+            }
             
         }
-        if recognizer.state == .Changed {
-            mainView.frame.origin.x = location.x
-            menuView.alpha = 1
-        }
-        if recognizer.state == .Ended {
-            if location.x > 60{
-                if velocity > 0 {
-                    openNav()
-                } else {
-                    closeNav()
-                }
-            }
-        } else {
-            closeNav()
-        }
-        
         
     }
     
