@@ -239,7 +239,7 @@ class MailBoxViewController: UIViewController, UIGestureRecognizerDelegate {
     
     func openNav() {
         UIView.animateWithDuration(0.5, delay: 0, usingSpringWithDamping: 0.9, initialSpringVelocity: 5, options: [], animations: { () -> Void in
-            self.mainView.frame.origin.x = self.screenView.frame.width - 60
+            self.mainView.frame.origin.x = self.screenView.frame.width - 44
             }, completion: { (finished: Bool) -> Void in
         })
     }
@@ -271,6 +271,12 @@ class MailBoxViewController: UIViewController, UIGestureRecognizerDelegate {
         
     }
     
+    @IBAction func didPressHumburger(sender: AnyObject) {
+        UIView.animateWithDuration(0.3) { () -> Void in
+            self.closeNav()
+        }
+        
+    }
     
     
     
