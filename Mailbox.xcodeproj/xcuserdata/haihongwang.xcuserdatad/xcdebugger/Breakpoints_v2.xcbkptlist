@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   type = "1"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Mailbox/MailBoxViewController.swift"
+            timestampString = "468730134.030464"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "31"
+            endingLineNumber = "31"
+            landmarkName = "MailBoxViewController"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Mailbox.MailBoxViewController.mainViewInitialCenter.getter : Swift.ImplicitlyUnwrappedOptional&lt;__C.CGPoint&gt;"
+                  moduleName = "Mailbox"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/haihongwang/Documents/ios_dev/week3/Mailbox/Mailbox/Mailbox/MailBoxViewController.swift"
+                  timestampString = "468736428.857106"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "8">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Mailbox.MailBoxViewController.mainViewInitialCenter.setter : Swift.ImplicitlyUnwrappedOptional&lt;__C.CGPoint&gt;"
+                  moduleName = "Mailbox"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/haihongwang/Documents/ios_dev/week3/Mailbox/Mailbox/Mailbox/MailBoxViewController.swift"
+                  timestampString = "468736428.857322"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "29">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Mailbox.MailBoxViewController.mainViewInitialCenter.materializeForSet : Swift.ImplicitlyUnwrappedOptional&lt;__C.CGPoint&gt;"
+                  moduleName = "Mailbox"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/haihongwang/Documents/ios_dev/week3/Mailbox/Mailbox/Mailbox/MailBoxViewController.swift"
+                  timestampString = "468736428.857557"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "12">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Mailbox.MailBoxViewController.init (Mailbox.MailBoxViewController.Type)(nibName : Swift.Optional&lt;Swift.String&gt;, bundle : Swift.Optional&lt;__ObjC.NSBundle&gt;) -&gt; Mailbox.MailBoxViewController"
+                  moduleName = "Mailbox"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/haihongwang/Documents/ios_dev/week3/Mailbox/Mailbox/Mailbox/MailBoxViewController.swift"
+                  timestampString = "468736428.857735"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "31"
+                  endingLineNumber = "31"
+                  offsetFromSymbolStart = "1120">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Mailbox.MailBoxViewController.init (Mailbox.MailBoxViewController.Type)(coder : __ObjC.NSCoder) -&gt; Swift.Optional&lt;Mailbox.MailBoxViewController&gt;"
+                  moduleName = "Mailbox"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/haihongwang/Documents/ios_dev/week3/Mailbox/Mailbox/Mailbox/MailBoxViewController.swift"
+                  timestampString = "468736428.857909"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "31"
+                  endingLineNumber = "31"
+                  offsetFromSymbolStart = "1016">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>

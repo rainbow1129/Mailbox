@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "F05A85A1EFD6E3FA5BA71C8055BD609B9C8CE78A",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "5762151D029D458DD4DCBDE5793BF54824C46788" : 0,
+    "F05A85A1EFD6E3FA5BA71C8055BD609B9C8CE78A" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "BFC4FEFE-3E02-423B-8438-F5396EBDCD2F",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "5762151D029D458DD4DCBDE5793BF54824C46788" : "",
+    "F05A85A1EFD6E3FA5BA71C8055BD609B9C8CE78A" : "Mailbox\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "Mailbox",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "Mailbox.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/rainbow1129\/Mailbox.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "5762151D029D458DD4DCBDE5793BF54824C46788"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/rainbow1129\/Mailbox.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "F05A85A1EFD6E3FA5BA71C8055BD609B9C8CE78A"
+    }
+  ]
+}
