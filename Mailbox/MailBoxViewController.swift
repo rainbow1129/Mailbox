@@ -68,9 +68,7 @@ class MailBoxViewController: UIViewController {
             if (diff < 0) {
                 self.leftBackground.alpha = 1
                 self.rightBackground.alpha = 0
-                
-                // Later icon
-                // Change opacity
+        
                 if (diff > -60) {
                     leftBackground.backgroundColor = grayColor
                     laterIcon.alpha = (-diff/60)
