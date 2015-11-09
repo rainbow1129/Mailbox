@@ -8,8 +8,9 @@
 
 import UIKit
 
-class MailBoxViewController: UIViewController {
+class MailBoxViewController: UIViewController, UIGestureRecognizerDelegate {
     
+    @IBOutlet weak var mainView: UIView!
     @IBOutlet weak var archiveIcon: UIImageView!
     @IBOutlet weak var deleteIcon: UIImageView!
     @IBOutlet weak var rescheduleView: UIImageView!
@@ -18,6 +19,7 @@ class MailBoxViewController: UIViewController {
     @IBOutlet weak var listIcon: UIImageView!
     @IBOutlet weak var laterIcon: UIImageView!
     
+    @IBOutlet var messagePan: UIPanGestureRecognizer!
     @IBOutlet weak var messageView: UIImageView!
     @IBOutlet weak var rightBackground: UIImageView!
     @IBOutlet weak var leftBackground: UIImageView!
@@ -25,6 +27,9 @@ class MailBoxViewController: UIViewController {
     @IBOutlet weak var feedScrollView: UIScrollView!
     
     var initialCenter: CGPoint!
+    var mainViewInitialCenter: CGPoint!
+    var leftEdgeGesture: UIScreenEdgePanGestureRecognizer!
+    var rightEdgeGesture: UIScreenEdgePanGestureRecognizer!
     
     // let grayColor = UIColor(red: 0xEA, green: 0xEA, blue: 0xEA, alpha: 1)
     let grayColor = UIColor(red: 0.92, green: 0.92, blue: 0.92, alpha: 1)
@@ -35,6 +40,11 @@ class MailBoxViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        messagePan.delegate = self
+        let edgePan = UIScreenEdgePanGestureRecognizer(target: self, action: "screenEdgeSwiped:")
+        edgePan.edges = .Left
+        
+        view.addGestureRecognizer(edgePan)
         feedScrollView.contentSize = CGSize(width: feed.image!.size.width, height: feed.image!.size.height + 90)
         rightBackground.alpha = 0
         leftBackground.alpha = 0
@@ -68,7 +78,7 @@ class MailBoxViewController: UIViewController {
             if (diff < 0) {
                 self.leftBackground.alpha = 1
                 self.rightBackground.alpha = 0
-        
+                
                 if (diff > -60) {
                     leftBackground.backgroundColor = grayColor
                     laterIcon.alpha = (-diff/60)
@@ -168,7 +178,7 @@ class MailBoxViewController: UIViewController {
                     
                 } else if (diff < 260) {
                     //Upon release, the message should continue to reveal the green background. When the animation it complete, it should hide the message.
-                    UIView.animateWithDuration(0.3, delay: 0.3, usingSpringWithDamping: 0.9, initialSpringVelocity: 10, options: [], animations: { () -> Void in
+                    UIView.animateWithDuration(0.3, delay: 0.1, usingSpringWithDamping: 0.9, initialSpringVelocity: 10, options: [], animations: { () -> Void in
                         self.messageView.frame.origin.x = 320
                         self.archiveIcon.frame.origin.x = 290
                         self.archiveIcon.alpha = 0
@@ -185,7 +195,7 @@ class MailBoxViewController: UIViewController {
                     
                 } else {
                     //Upon release, the message should continue to reveal the green background. When the animation it complete, it should hide the message.
-                    UIView.animateWithDuration(0.3, delay: 0.3, usingSpringWithDamping: 0.9, initialSpringVelocity: 10, options: [], animations: { () -> Void in
+                    UIView.animateWithDuration(0.3, delay: 0.1, usingSpringWithDamping: 0.9, initialSpringVelocity: 10, options: [], animations: { () -> Void in
                         self.messageView.frame.origin.x = 320
                         self.deleteIcon.frame.origin.x = 290
                         self.deleteIcon.alpha = 0
@@ -225,6 +235,45 @@ class MailBoxViewController: UIViewController {
             }, completion: { (finished: Bool) -> Void in
         })
     }
+    
+    func openNav() {
+        let screenWidth = mainView.frame.width
+        let open = screenWidth - 60
+        let menuOpen = CGPoint(x: open, y: 0.0)
+    }
+    
+    func closeNav() {
+        let menuClose = CGPoint(x: 0.0, y:0.0)
+    }
+    
+    
+    func screenEdgeSwiped(recognizer: UIScreenEdgePanGestureRecognizer) {
+        let location = recognizer.locationInView(mainView)
+        let velocity = recognizer.velocityInView(mainView).x
+        if recognizer.state == .Began {
+            
+        }
+        if recognizer.state == .Changed {
+            mainView.frame.origin.x = location.x
+            menuView.alpha = 1
+        }
+        if recognizer.state == .Ended {
+            if location.x > 60{
+                if velocity > 0 {
+                    openNav()
+                } else {
+                    closeNav()
+                }
+            }
+        } else {
+            closeNav()
+        }
+        
+        
+    }
+    
+    
+    
     
     /*
     // MARK: - Navigation

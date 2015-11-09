@@ -19,7 +19,7 @@
                             </imageView>
                             <view contentMode="scaleToFill" id="khl-HA-46i">
                                 <rect key="frame" x="0.0" y="0.0" width="321" height="1431"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <subviews>
                                     <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="nav" id="MDe-Dr-vdK">
                                         <rect key="frame" x="0.0" y="0.0" width="320" height="65"/>
@@ -110,6 +110,10 @@
                                     </imageView>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="fyT-5h-Rga" appends="YES" id="L0H-FO-Fie"/>
+                                </connections>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -125,7 +129,9 @@
                         <outlet property="leftBackground" destination="1vr-IX-bgq" id="8UR-Zm-IKm"/>
                         <outlet property="listIcon" destination="hRK-ha-PUO" id="kEV-kG-vMh"/>
                         <outlet property="listView" destination="Vg5-ZI-wT4" id="62P-nZ-ecm"/>
+                        <outlet property="mainView" destination="khl-HA-46i" id="tuV-aC-45k"/>
                         <outlet property="menuView" destination="hQV-wi-7Pu" id="A5e-Mm-cZG"/>
+                        <outlet property="messagePan" destination="C6E-p6-9vA" id="Cdi-cQ-a6o"/>
                         <outlet property="messageView" destination="OFn-WA-H7r" id="AyP-kO-sYo"/>
                         <outlet property="rescheduleView" destination="UO0-pN-OnN" id="ZsS-5E-60I"/>
                         <outlet property="rightBackground" destination="COD-9U-tDk" id="BLd-Ye-iV5"/>
@@ -147,6 +153,11 @@
                         <action selector="didTapList:" destination="2bV-Pa-AuO" id="XqD-0x-KLQ"/>
                     </connections>
                 </tapGestureRecognizer>
+                <screenEdgePanGestureRecognizer minimumNumberOfTouches="1" id="fyT-5h-Rga">
+                    <connections>
+                        <action selector="didPanFromEdge:" destination="2bV-Pa-AuO" id="aaq-96-KZ0"/>
+                    </connections>
+                </screenEdgePanGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="508" y="405.5"/>
         </scene>
